@@ -13,21 +13,23 @@ function App() {
   const [activePage, setActivePage] = React.useState('activities');
 
   return (
-    <div className="app-container">
+    <>
       <nav className='app-nav'>
         <Sidebar activePage={activePage} setActivePage={setActivePage}/>
       </nav>
-      <header className='app-header'>
-        <Header />
-      </header>
-      <main className="app-main">
-        {activePage === 'activities' && <Activities />}
-        {activePage === 'goals' && <Goals />}
-        {activePage === 'statistics' && <Statistics />}
-        {activePage === 'profile' && <Profile />}
-        {activePage === 'settings' && <Settings />}
-      </main>
-    </div>
+      <div className="app-container">
+        <header className='app-header'>
+          <Header />
+        </header>
+        <main className="app-main">
+          {activePage === 'activities' && <Activities />}
+          {activePage === 'goals' && <Goals />}
+          {activePage === 'statistics' && <Statistics />}
+          {activePage === 'profile' && <Profile />}
+          {activePage === 'settings' && <Settings />}
+        </main>
+      </div>
+    </>
   );
 }
 

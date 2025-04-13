@@ -30,42 +30,25 @@
   }
 }
 
-.app-container {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 200px 1fr;
-  grid-template-areas: 
-    "sidebar header"
-    "sidebar main";
-  height: 100vh; 
-  overflow: hidden;
-}
-
-.app-container > * {
-  border: 2px solid #000;
-}
-
 .app-nav {
-  grid-area: sidebar;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 200px;
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
+  width: 300px;
+  border-right: 2px solid #26331d;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden;
 }
 
 .app-header {
-  grid-area: header;
-  border-top: none;
-  border-right: none;
 }
 
 .app-main {
-  grid-area: main;
   overflow-y: auto;
-  border-right: none;
-  border-bottom: none;
 }
