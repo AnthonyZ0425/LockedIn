@@ -1,0 +1,26 @@
+.sidebar {
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.nav-links li {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* .nav-links li.active {
+
+} */

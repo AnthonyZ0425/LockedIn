@@ -5,9 +5,9 @@ function Activities() {
     return (
         <div>
             <h1>Today's Activities</h1>
-            <div>
-                <ActivityCard />
-            </div>
+             <div>
+                {/* <ActivityCard /> */}
+            </div> 
         </div>
     );
 }

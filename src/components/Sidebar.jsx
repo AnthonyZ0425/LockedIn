@@ -1,15 +1,42 @@
 import React from "react"
+import "./Sidebar.css"
 
-function Sidebar(props) {
+function Sidebar({activePage, setActivePage}) {
+    
     return (
-        <nav>
-            <h1>LockedIn</h1>
-            <ul>
-                <li>Activities</li>
-                <li>Goals</li>
-                <li>Statistics</li>
-                <li>Profile</li>
-                <li>Settings</li>
+        <nav className="sidebar">
+            <h1 className="logo">LockedIn</h1>
+            <ul className="nav-links">
+                <li 
+                    className={activePage === 'activites' ? 'active' : null}
+                    onClick={() => setActivePage('activities')}
+                >
+                    Activities
+                </li>
+                <li 
+                    className={activePage === 'goals' ? 'active' : null}
+                    onClick={() => setActivePage('goals')}
+                >
+                    Goals
+                </li>
+                <li 
+                    className={activePage === 'statistics' ? 'active' : null}
+                    onClick={() => setActivePage('statistics')}
+                >
+                    Statistics
+                </li>
+                <li 
+                    className={activePage === 'profile' ? 'active' : null}
+                    onClick={() => setActivePage('profile')}
+                >
+                    Profile
+                </li>
+                <li 
+                    className={activePage === 'settings' ? 'active' : null}
+                    onClick={() => setActivePage('settings')}
+                >
+                    Settings
+                </li>
             </ul>
         </nav>
     );
