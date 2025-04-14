@@ -36,7 +36,7 @@
   left: 0;
   height: 100vh;
   width: 300px;
-  border-right: 2px solid #26331d;
+  border-right: 2px solid var(--border-color);
 }
 
 .app-container {
@@ -46,8 +46,6 @@
   overflow: hidden;
 }
 
-.app-header {
-}
 
 .app-main {
   overflow-y: auto;
