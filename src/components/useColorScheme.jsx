@@ -22,10 +22,8 @@ export function useColorScheme() {
   useEffect(() => {
     if (value) {
       document.body.classList.add("dark");
-      localStorage.setItem("isDark", true);
     } else {
       document.body.classList.remove("dark");
-      localStorage.setItem("isDark", false);
     }
   }, [value]);
 
