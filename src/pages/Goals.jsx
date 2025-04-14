@@ -5,7 +5,7 @@ function Goals() {
         <div>
             <h1>Goals</h1>
             <button>Set A goal</button>
-            <GoalContent />
+            {/* <GoalContent /> */}
         </div>
     )
 }
