@@ -12,14 +12,44 @@
 
 .nav-links {
     list-style-type: none;
-    padding: 0px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0;
 }
 
 .nav-links li {
-    margin-top: 15px;
     cursor: pointer;
+    padding: 1em 2em;
+
 }
 
-/* .nav-links li.active {
+.nav-links li.active {
+    outline: 2px solid #0c920c; /* Add a border around the active item */
+    border-radius: 8px;
+    background-color: #58CC02; /* Optional: Highlight background */
+    font-weight: bold;
+    color: #213547; /* Optional: Change text color */
+}
 
-} */
+.nav-links li:hover {
+    outline: 2px solid #0c920c;
+    border-radius: 8px;
+}
+
+.logo {
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}

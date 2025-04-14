@@ -6,9 +6,9 @@ function Sidebar({activePage, setActivePage}) {
     return (
         <nav className="sidebar">
             <h1 className="logo">LockedIn</h1>
-            <ul className="nav-links">
+            <ul className="nav-links nav-container">
                 <li 
-                    className={activePage === 'activites' ? 'active' : null}
+                    className={activePage === 'activities' ? 'active' : null}
                     onClick={() => setActivePage('activities')}
                 >
                     Activities
