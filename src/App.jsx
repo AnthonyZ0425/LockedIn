@@ -7,10 +7,11 @@ import Statistics from "./pages/Statistics";
 import Profile from "./pages/Profile";
 import Goals from "./pages/Goals";
 import Header from "./components/Header";
+import useLocalStorage from "use-local-storage";
 
 function App() {
 
-  const [activePage, setActivePage] = React.useState('activities');
+  const [activePage, setActivePage] = useLocalStorage("page", 'activities');
 
   return (
     <>
