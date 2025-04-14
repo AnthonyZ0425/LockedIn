@@ -11,7 +11,7 @@
 }
 
 body {
-  color: #213547;
+  --color: #213547;
   --background-color: #fafafa;
   --border-color: #347009;
 
@@ -21,10 +21,11 @@ body {
 
 body {
   background-color: var(--background-color);
+  color: var(--color);
 }
 
 body.dark {
-  --color: rgba(255, 255, 255, 0.87);
+  --color: #fafafa;
   --background-color: #242424;
   --border-color: #26331d;
 
