@@ -19,6 +19,12 @@ function Activities() {
             {isModalOpen && (
                 <div className="modal">
                     <div className="modal-content">
+                        <button className="modal-close"
+                                onClick={() => setIsModalOpen(false)}
+                                aria-label="Close modal"
+                        >
+                            &times;
+                        </button>
                         <h2>Add a New Activity</h2>
                         <form action={handleModal}>
                             <label htmlFor="activityType">
@@ -32,9 +38,6 @@ function Activities() {
                             </select>
 
                             <button type="submit">Submit</button>
-                            <button type="button" onClick={() => setIsModalOpen(false)}>
-                                Cancel
-                            </button>
                         </form>
                     </div>
                 </div>
