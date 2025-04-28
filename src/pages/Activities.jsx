@@ -13,22 +13,32 @@ function Activities() {
     function handleModal(formData) {
         console.log(formData.get("activityType"))
     }
+
+    const openModal = () => {
+        setIsModalOpen(true);
+        document.body.classList.add("no-scroll");
+        document.querySelector(".background-container").classList.add("no-interaction");
+    }
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedActivity(null);
+        document.body.classList.remove("no-scroll");
+        document.querySelector(".background-container").classList.remove("no-interaction");
+    }
     return (
         <div>
             <h1>Today's Activities</h1>
             <div>
                 {/* <ActivityCard /> */}
             </div> 
-            <button onClick={() => setIsModalOpen(true)}>New Activity</button>
+            <button onClick={openModal}>New Activity</button>
         
             {isModalOpen && (
                 <div className="modal">
                     <div className="modal-content">
                         <button className="modal-close"
-                                onClick={() => {
-                                    setIsModalOpen(false);
-                                    setSelectedActivity(null);
-                                }}
+                                onClick={closeModal}
                                 aria-label="Close modal"
                         >
                             &times;
