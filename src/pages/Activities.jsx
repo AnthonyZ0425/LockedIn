@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import ActivityCard from "../components/ActivityCard"
 import "./Activity.css"
+import ActivityDetails from "../components/ActivityDetails"
 
 function Activities() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,11 +66,7 @@ function Activities() {
                                 Reading
                             </button>
                         </div>
-                        {selectedActivity && (
-                            <div>
-                                <h3> You selected: {selectedActivity}</h3>
-                            </div>
-                        )}
+                        <ActivityDetails selectedActivity={selectedActivity}/>
                     </div>
                 </div>
             )}
